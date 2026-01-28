@@ -1,24 +1,942 @@
 <!DOCTYPE html>
-<html>
-<head><title>Services | Adarsh & Co.</title></head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Services | Adarsh & Co. Chartered Accountants</title>
+
+<!-- FAVICONS -->
+<link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ================= BASE ================= */
+.about-hero{
+  background:linear-gradient(90deg,#0b3c9d,#1d4ed8,#3b82f6,#60a5fa);
+  color:#fff;
+  padding:140px 20px 110px;
+}
+
+.about-hero h1{
+  font-family:"Playfair Display",serif;
+  font-size:52px;
+  font-weight:800;
+  margin-bottom:20px;
+}
+
+.about-hero p{
+  max-width:720px;
+  font-size:18px;
+  color:#f8fafc;
+}
+
+.about-section{
+  padding:90px 20px;
+}
+
+.about-container{
+  max-width:1100px;
+  margin:auto;
+}
+
+.about-container h2{
+  font-family:"Playfair Display",serif;
+  font-size:36px;
+  margin-bottom:24px;
+}
+
+.about-container p{
+  font-size:17px;
+  line-height:1.8;
+  margin-bottom:18px;
+}
+
+.values, .team{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+
+.value-card, .team-card{
+  background:#fff;
+  padding:32px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  transition:transform .3s ease;
+}
+
+.value-card:hover, .team-card:hover{
+  transform:translateY(-6px);
+}
+
+.value-card h3,
+.team-card h3{
+  font-family:"Playfair Display",serif;
+  color:#1d4ed8;
+}
+
+.team-card span{
+  display:block;
+  margin-top:4px;
+  font-size:14px;
+  font-weight:600;
+  color:#64748b;
+}
+
+.blue-section{
+  background:linear-gradient(90deg,#0b3c9d,#1d4ed8,#2563eb);
+  color:#fff;
+}
+
+.blue-section h2,
+.blue-section p{
+  color:#fff;
+}
+
+/* GOOGLE RATING */
+.rating-box{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-top:30px;
+}
+
+.stars{
+  font-size:22px;
+  color:#facc15;
+}
+
+/* FADE ANIMATION */
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:all .8s ease;
+}
+
+.fade.show{
+  opacity:1;
+  transform:none;
+}
+
+:root{
+  --blue-gradient: linear-gradient(
+  90deg,
+  #0b3c9d 0%,    /* deep blue (not black) */
+  #1d4ed8 40%,   /* royal blue */
+  #3b82f6 70%,   /* bright blue */
+  #60a5fa 100%   /* soft sky blue */
+);
+
+  --dark:#111827;
+}
+
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+  font-family:Inter, system-ui, sans-serif;
+  color:var(--dark);
+  line-height:1.65;
+}
+
+/* ================= HEADER ================= */
+header{
+  position:sticky;
+  top:0;
+  background:#fff;
+  box-shadow:0 6px 20px rgba(0,0,0,.08);
+  z-index:1000;
+}
+nav{
+  max-width:1200px;
+  margin:auto;
+  padding:14px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+/* BRAND */
+/* BRAND EMPHASIS */
+.header-brand{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.header-brand img{
+  height:52px;   /* bigger logo */
+}
+
+.brand-text strong{
+  font-family:"Playfair Display", serif;
+  font-size:28px;     /* increased */
+  font-weight:800;
+  letter-spacing:.4px;
+  color:#ffffff;
+}
+
+.brand-text span{
+  display:block;
+  font-size:14px;
+  font-weight:500;
+  color:#dbeafe;
+  margin-top:2px;
+}
+
+
+/* MENU */
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:30px;
+}
+nav a{
+  font-family:Inter, sans-serif;
+  text-decoration:none;
+  color:#0f172a;
+  font-weight:600;
+  font-size:15px;
+}
+nav a:hover{
+  color:#1d4ed8;
+}
+.main-header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:var(--blue-gradient);
+}
+
+
+.header-inner{
+  max-width:1400px;
+  margin:auto;
+  padding:18px 28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+}
+
+/* BRAND */
+.header-brand{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  transition:transform .35s ease, opacity .35s ease;
+}
+
+.header-brand img{
+  height:54px;
+}
+
+.brand-text{
+  line-height:1.1;
+}
+
+.brand-name{
+  font-family:"Playfair Display", serif;
+  font-size:30px;
+  font-weight:800;
+  letter-spacing:.6px;
+  color:#ffffff;
+}
+
+.brand-sub{
+  font-family:"Playfair Display", serif; /* SAME FONT */
+  font-size:15px;
+  font-weight:600;
+  letter-spacing:.3px;
+  color:#e0e7ff;
+}
+
+
+/* NAV */
+/* ================= HEADER NAV – FINAL ================= */
+.header-nav{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-nav a{
+  letter-spacing: 0.3px;
+}
+
+.header-nav a{
+  position: relative;
+  color: #ffffff;            /* Always white */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color .2s ease;
+}
+
+/* Hover: keep text white */
+.header-nav a:hover{
+  color: #ffffff;
+}
+
+/* Active page text in gold */
+.header-nav a.active{
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+/* Gold underline base (hidden) */
+.header-nav a::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg,#fbbf24,#f59e0b);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: width .25s ease, opacity .25s ease;
+}
+
+/* Show underline on hover */
+.header-nav a:hover::after{
+  width: 100%;
+  opacity: 1;
+}
+
+/* Active underline always visible */
+.header-nav a.active::after{
+  width: 100%;
+  opacity: 1;
+}
+
+
+/* CTA */
+.header-cta{
+  display:flex;
+  gap:14px;
+}
+.call-btn{
+  background:#fbbf24;
+  color:#0b1f3a;
+  padding:10px 20px;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+}
+.callback-btn{
+  background:#fff;
+  color:#0f2a8a;
+  padding:10px 20px;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+
+/* ================= HERO ================= */
+.hero{
+  background:var(--blue-gradient);
+  color:#fff;
+  padding:160px 20px 130px;
+  margin-top:-2px;
+}
+
+.hero-content{
+  max-width:1100px;
+  margin:auto;
+}
+.hero small{
+  font-family:"Playfair Display", serif;
+  font-size:22px;
+  opacity:.9;
+}
+.hero h1{
+  font-family:"Playfair Display", serif;
+  font-size:56px;
+  font-weight:800;
+  margin:25px 0 30px;
+  max-width:900px;
+}
+.hero p{
+  font-size:20px;
+  max-width:760px;
+  opacity:.95;
+}
+.hero a{
+  display:inline-block;
+  margin-top:40px;
+  background:#fff;
+  color:#0f2a8a;
+  padding:16px 48px;
+  border-radius:40px;
+  font-weight:700;
+  text-decoration:none;
+}
+
+/* ================= SECTIONS ================= */
+.section{
+  padding:100px 20px;
+}
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+.section-title{
+  font-family:"Playfair Display", serif;
+  text-align:center;
+  font-size:40px;
+  font-weight:700;
+  margin-bottom:60px;
+}
+
+/* ================= CARDS ================= */
+.grid{
+  display:grid;
+  gap:30px;
+}
+.grid-3{
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+}
+.card{
+  background:#fff;
+  padding:42px;
+  border-radius:18px;
+  box-shadow:0 14px 36px rgba(0,0,0,.08);
+}
+.card h3{
+  font-family:"Playfair Display", serif;
+  font-size:22px;
+  margin-bottom:14px;
+  color:#1d4ed8;
+}
+
+/* ================= NUMBERS ================= */
+.numbers{
+  background:var(--gradient);
+  color:#fff;
+}
+.numbers .section-title{color:#fff}
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:30px;
+}
+.stat{
+  background:#fff;
+  color:#111;
+  padding:36px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+.stat-circle{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  background:rgba(29,78,216,.15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+}
+.stat h3{
+  font-size:36px;
+  font-weight:800;
+}
+.stat p{
+  font-weight:600;
+  color:#555;
+}
+
+/* ================= CTA ================= */
+.cta{
+  background: var(--blue-gradient);
+  color:#fff;
+  text-align:center;
+  padding:100px 20px;
+}
+.cta h2{
+  font-family:"Playfair Display", serif;
+  font-size:38px;
+  margin-bottom:26px;
+}
+.cta a{
+  background:#fbbf24;
+  color:#111;
+  padding:16px 46px;
+  border-radius:36px;
+  font-weight:700;
+  text-decoration:none;
+  font-size:16px;
+}
+.cta {
+  position: relative;
+}
+
+.cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.25);
+}
+
+
+/* ================= FOOTER ================= */
+footer{
+  background:#020617;
+  color:#cbd5f5;
+  text-align:center;
+  padding:26px;
+}
+
+/* ================= SCROLL ANIMATION ================= */
+.fade{
+  opacity:0;
+  transform:translateY(40px);
+  transition:opacity .9s ease, transform .9s ease;
+}
+.fade.show{
+  opacity:1;
+  transform:none;
+}
+.main-footer{
+  background:#fff;
+  border-top:1px solid #e5e7eb;
+  font-family:Inter, sans-serif;
+}
+
+.footer-top{
+  padding:60px 24px 40px;
+}
+
+.footer-grid{
+  max-width:1400px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:40px;
+}
+
+.footer-grid h4{
+  font-size:18px;
+  margin-bottom:16px;
+  color:#0f172a;
+}
+
+.footer-grid a{
+  display:block;
+  color:#1d4ed8;
+  text-decoration:none;
+  margin-bottom:10px;
+  font-size:15px;
+}
+.footer-grid a:hover{
+  text-decoration:underline;
+}
+
+.footer-grid p{
+  font-size:14px;
+  color:#475569;
+  line-height:1.6;
+}
+
+.footer-social{
+  margin-top:12px;
+}
+
+.footer-bottom{
+  text-align:center;
+  padding:16px;
+  font-size:14px;
+  color:#475569;
+  border-top:1px solid #e5e7eb;
+}
+/* SCROLL TO TOP */
+#scrollTopBtn{
+  position:fixed;
+  bottom:28px;
+  right:28px;
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  background:#ffffff;
+  box-shadow:0 12px 30px rgba(0,0,0,.15);
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .3s ease;
+}
+
+#scrollTopBtn.show{
+  opacity:1;
+  pointer-events:auto;
+}
+
+#scrollTopBtn svg{
+  position:absolute;
+  transform:rotate(-90deg);
+}
+
+#scrollTopBtn span{
+  position:relative;
+  font-size:22px;
+  font-weight:700;
+  color:#1d4ed8;
+}
+#scrollTopBtn:hover{
+  box-shadow:
+    0 0 0 6px rgba(29,78,216,.15),
+    0 16px 40px rgba(29,78,216,.35);
+}
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+      scroll-behavior: auto !important;
+    }
+
+    #scrollTopBtn {
+      box-shadow: 0 6px 20px rgba(0,0,0,.15);
+    }
+  }
+/* ================= GOLD HEADER ACCENTS ================= */
+
+/* Base nav link */
+/* =========================
+   HEADER NAV LINKS
+========================= */
+
+.header-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav a {
+  position: relative;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Hover underline */
+.header-nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: width 0.25s ease, opacity 0.25s ease;
+}
+
+.header-nav a:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+/* Active page */
+.header-nav a.active {
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+.header-nav a.active::after {
+  width: 100%;
+  opacity: 1;
+}
+
+/* Gold line under header */
+/* ===== STICKY HEADER FIX ===== */
+.main-header {
+  position: sticky;       /* REQUIRED */
+  top: 0;                 /* REQUIRED */
+  z-index: 1000;          /* above mega menu */
+  background: linear-gradient(
+    90deg,
+    #0b3c9d 0%,
+    #1d4ed8 40%,
+    #3b82f6 70%,
+    #60a5fa 100%
+  );
+}
+
+/* IMPORTANT: header wrapper must NOT block sticky */
+.header-inner {
+  position: relative;
+  overflow: visible;      /* REQUIRED */
+}
+
+.main-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #fbbf24 25%,
+    #f59e0b 50%,
+    #fbbf24 75%,
+    transparent 100%
+  );
+}
+
+/* =========================
+   MEGA MENU (FINAL)
+========================= */
+
+/* Parent item */
+/* ================= HEADER NAV ================= */
+
+.header-nav ul {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav li {
+  position: relative;
+}
+
+/* ================= MEGA MENU ================= */
+
+.has-mega {
+  position: relative;
+}
+
+/* container */
+.mega-menu {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 32px);   /* 👈 pushes below gold line */
+  transform: translateX(-50%);
+  width: min(1200px, 95vw);
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  padding: 40px 48px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+  z-index: 999;
+}
+
+
+/* show on hover */
+.has-mega:hover > .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* inner grid */
+.mega-inner {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 36px;
+  padding: 40px 48px;
+}
+
+/* columns */
+.mega-column h4 {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1d4ed8;
+  margin-bottom: 14px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #facc15;
+  white-space: nowrap;
+}
+
+/* FORCE VERTICAL LIST — ONE BELOW THE OTHER */
+
+/* ===== FIX: STACK SERVICES VERTICALLY ===== */
+
+/* Ensure each column stacks items */
+.mega-column ul {
+  display: block;          /* force vertical list */
+  padding: 0;
+  margin: 0;
+}
+
+/* Each service on its own line */
+.mega-column li {
+  display: block;          /* 👈 THIS is the key */
+  width: 100%;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  font-size: 14.5px;
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* Hover effect stays clean */
+.mega-column li:hover {
+  color: #1d4ed8;
+  cursor: pointer;
+}
+
+
+.mega-column li {
+  margin-bottom: 10px;
+}
+
+.mega-column a {
+  font-size: 14.5px;
+  color: #334155;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.mega-column a:hover {
+  color: #1d4ed8;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+  .mega-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .mega-inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+</style>
 <body>
+<header class="main-header">
+  <div class="header-inner">
 
-<header></header>
+    <div class="header-brand">
+      <img src="Screenshot-Capture-2023-12-04-15-58-14.png" alt="CA India Logo">
+      <div class="brand-text">
+        <div class="brand-name">ADARSH & CO.</div>
+        <div class="brand-sub">Chartered Accountants</div>
+      </div>
+    </div>
 
-<section class="section">
-<div class="container">
-<h2>Our Professional Services</h2>
+    <nav class="header-nav">
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
 
-<div class="grid grid-3">
-<div class="card"><h3>Auditing & Assurance</h3><p>Statutory, Bank, Trust, GST and Due Diligence Audits.</p></div>
-<div class="card"><h3>Accounting & MIS</h3><p>Bookkeeping, budgeting, financial reporting and MIS.</p></div>
-<div class="card"><h3>Direct Tax</h3><p>Income tax returns, assessments, appeals and TDS.</p></div>
-<div class="card"><h3>GST & Indirect Tax</h3><p>GST registration, filing, audits, refunds & representation.</p></div>
-<div class="card"><h3>NRI & FEMA</h3><p>FDI, ECB, RBI compliance, Form 15CB.</p></div>
-<div class="card"><h3>Startup & ROC</h3><p>Incorporation, compliance, valuation and advisory.</p></div>
-</div>
-</div>
-</section>
+    <!-- SERVICES -->
+    <li class="has-mega">
+      <a href="#" class="services-link">Services</a>
+
+
+      <div class="mega-menu">
+        <div class="mega-inner">
+
+          <div class="mega-column">
+            <h4><a href="audit-assurance.html">Auditing & Assurance</a></h4>
+            <ul>
+              <li><a href="audit-assurance.html#statutory-audit">Statutory Audit</a></li>
+              <li><a href="audit-assurance.html#tax-audit">Tax Audit (44AB)</a></li>
+              <li><a href="audit-assurance.html#gst-audit">GST Audit</a></li>
+              <li><a href="audit-assurance.html#bank-audit">Bank Audit</a></li>
+              <li><a href="audit-assurance.html#transfer-pricing">Transfer Pricing Audit</a></li>
+              <li><a href="audit-assurance.html#due-diligence">Due Diligence Audit</a></li>
+              <li><a href="audit-assurance.html#trust-ngo">Trust & NGO Audit</a></li>
+            </ul>
+          </div>
+
+          <div class="mega-column">
+            <h4><a href="accounting.html">Accounting & Bookkeeping</a></h4>
+            <ul>
+              <li><a href="accounting.html#financial-accounting">Financial Accounting</a></li>
+              <li><a href="accounting.html#bookkeeping">Bookkeeping</a></li>
+              <li><a href="accounting.html#mis">MIS Reports</a></li>
+              <li><a href="accounting.html#budgeting">Budgeting & Forecasting</a></li>
+              <li><a href="accounting.html#review">Review of Accounts</a></li>
+            </ul>
+          </div>
+
+          <div class="mega-column">
+            <h4><a href="direct-tax.html">Direct Taxation</a></h4>
+            <ul>
+              <li><a href="direct-tax.html#individual">Income Tax – Individuals</a></li>
+              <li><a href="direct-tax.html#corporate">Corporate Tax</a></li>
+              <li><a href="direct-tax.html#planning">Tax Planning & Advisory</a></li>
+              <li><a href="direct-tax.html#appeals">Assessments & Appeals</a></li>
+            </ul>
+          </div>
+
+          <div class="mega-column">
+            <h4><a href="gst.html">Indirect Taxation (GST)</a></h4>
+            <ul>
+              <li><a href="gst.html#registration">GST Registration</a></li>
+              <li><a href="gst.html#returns">GST Return Filing</a></li>
+              <li><a href="gst.html#audit">GST Audit & Assessment</a></li>
+              <li><a href="gst.html#refunds">GST Refunds</a></li>
+              <li><a href="gst.html#gstr9">GSTR-9 & 9C</a></li>
+            </ul>
+          </div>
+
+          <div class="mega-column">
+            <h4><a href="advisory.html">Advisory & Compliance</a></h4>
+            <ul>
+              <li><a href="advisory.html#startup">Startup Advisory</a></li>
+              <li><a href="advisory.html#fundraising">Fundraising Support</a></li>
+              <li><a href="advisory.html#incorporation">Company & LLP Incorporation</a></li>
+              <li><a href="advisory.html#roc">ROC & Secretarial Compliance</a></li>
+              <li><a href="advisory.html#fema">FEMA & NRI Services</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </li>
+
+    <li><a href="team.html">Who We Serve</a></li>
+    <li><a href="contact.html">Info</a></li>
+  </ul>
+</nav>
+
+
+    <div class="header-cta">
+      <a class="call-btn" href="tel:+919845184260">Call Us: +91 98451 84260</a>
+      <a class="callback-btn" href="contact.html">Request a Callback</a>
+    </div>
+
+  </div>
+</header>
+
 
 </body>
-</html>

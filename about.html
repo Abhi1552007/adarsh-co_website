@@ -1,33 +1,508 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>About Us | Adarsh & Co.</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<header> <!-- SAME HEADER AS INDEX -->
-<nav>
-  <h2>ADARSH & CO.</h2>
-  <ul>
-    <li><a href="file:///Users/abhinavraob/Desktop/Adarsh&Co./index.html">Home</a></li>
-    <li><a href="file:///Users/abhinavraob/Desktop/Adarsh&Co./about.html">About</a></li>
-    <li><a href="file:///Users/abhinavraob/Desktop/Adarsh&Co./services.html">Services</a></li>
-    <li><a href="file:///Users/abhinavraob/Desktop/Adarsh&Co./team.html">Our Team</a></li>
-    <li><a href="file:///Users/abhinavraob/Desktop/Adarsh&Co./resources.html">Resources</a></li>
-    <li><a href="file:///Users/abhinavraob/Desktop/Adarsh&Co./contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <title>About Us | Adarsh & Co. Chartered Accountants</title>
+
+  <!-- FAVICONS -->
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<!-- MOBILE MENU OVERLAY -->
+<div id="menuOverlay"></div>
+
+<!-- ================= HEADER ================= -->
+<header class="main-header">
+  <div class="header-inner">
+
+    <!-- BRAND -->
+    <a href="index.html" class="header-brand">
+  <img src="Screenshot-Capture-2023-12-04-15-58-14.png" alt="CA India Logo">
+  <div class="brand-text">
+    <div class="brand-name">ADARSH & CO.</div>
+    <div class="brand-sub">Chartered Accountants</div>
+  </div>
+</a>
+
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- DESKTOP NAV -->
+    <nav class="header-nav" id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+
+        <!-- SERVICES -->
+        <li class="has-mega">
+          <a href="javascript:void(0)">Services</a>
+
+          <div class="mega-menu">
+            <div class="mega-inner">
+
+              <div class="mega-column">
+                <h4><a href="audit-assurance.html">Auditing & Assurance</a></h4>
+                <ul>
+                  <li><a href="audit-assurance.html#statutory-audit">Statutory Audit</a></li>
+                  <li><a href="audit-assurance.html#tax-audit">Tax Audit (44AB)</a></li>
+                  <li><a href="audit-assurance.html#gst-audit">GST Audit</a></li>
+                  <li><a href="audit-assurance.html#bank-audit">Bank Audit</a></li>
+                  <li><a href="audit-assurance.html#transfer-pricing">Transfer Pricing Audit</a></li>
+                  <li><a href="audit-assurance.html#due-diligence">Due Diligence Audit</a></li>
+                  <li><a href="audit-assurance.html#trust-ngo">Trust & NGO Audit</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-column">
+                <h4><a href="accounting.html">Accounting & Bookkeeping</a></h4>
+                <ul>
+                  <li><a href="accounting.html#financial-accounting">Financial Accounting</a></li>
+                  <li><a href="accounting.html#bookkeeping">Bookkeeping</a></li>
+                  <li><a href="accounting.html#mis">MIS Reports</a></li>
+                  <li><a href="accounting.html#budgeting">Budgeting & Forecasting</a></li>
+                  <li><a href="accounting.html#review">Review of Accounts</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-column">
+                <h4><a href="direct-tax.html">Direct Taxation</a></h4>
+                <ul>
+                  <li><a href="direct-tax.html#individual">Income Tax – Individuals</a></li>
+                  <li><a href="direct-tax.html#corporate">Corporate Tax</a></li>
+                  <li><a href="direct-tax.html#planning">Tax Planning & Advisory</a></li>
+                  <li><a href="direct-tax.html#appeals">Assessments & Appeals</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-column">
+                <h4><a href="gst.html">Indirect Taxation (GST)</a></h4>
+                <ul>
+                  <li><a href="gst.html#registration">GST Registration</a></li>
+                  <li><a href="gst.html#returns">GST Return Filing</a></li>
+                  <li><a href="gst.html#audit">GST Audit & Assessment</a></li>
+                  <li><a href="gst.html#refunds">GST Refunds</a></li>
+                  <li><a href="gst.html#gstr9">GSTR-9 & 9C</a></li>
+                </ul>
+              </div>
+
+              <div class="mega-column">
+                <h4><a href="advisory.html">Advisory & Compliance</a></h4>
+                <ul>
+                  <li><a href="advisory.html#startup">Startup Advisory</a></li>
+                  <li><a href="advisory.html#fundraising">Fundraising Support</a></li>
+                  <li><a href="advisory.html#incorporation">Company & LLP Incorporation</a></li>
+                  <li><a href="advisory.html#roc">ROC & Secretarial Compliance</a></li>
+                  <li><a href="advisory.html#fema">FEMA & NRI Services</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </li>
+
+        <li><a href="team.html">Who We Serve</a></li>
+        <li><a href="contact.html">Info</a></li>
+      </ul>
+    </nav>
+
+    <!-- DESKTOP CTA -->
+    <div class="header-cta">
+      <a class="call-btn" href="tel:+919845184260">Call Us: +91 98451 84260</a>
+      <a class="callback-btn" href="contact.html">Request a Callback</a>
+    </div>
+
+  </div>
 </header>
 
-<section class="page">
-<h1>About Us</h1>
-<p>
-Adarsh & Co., Chartered Accountants, established in 1997 in Bengaluru,
-provides comprehensive Audit, Taxation, Accounting and Corporate
-Advisory services with 28+ years of excellence.
-</p>
+<!-- ================= MOBILE MENU ================= -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="menu-close" id="menuClose">✕</button>
+
+  <!-- MAIN MENU -->
+  <div class="mobile-panel active" id="mainMenu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+
+    <button class="submenu-btn" data-target="servicesMenu">
+      Services →
+    </button>
+
+    <a href="team.html">Who We Serve</a>
+    <a href="contact.html">Info</a>
+    <div class="mobile-contact-actions">
+  <a href="tel:+919845184260" class="call-action" aria-label="Call Us">
+    📞
+  </a>
+
+  <a href="https://wa.me/919845184260"
+     target="_blank"
+     class="whatsapp-action"
+     aria-label="WhatsApp">
+    <img src="images/whatsapp.png" alt="WhatsApp">
+  </a>
+</div>
+
+  </div>
+
+  <!-- SERVICES SUBMENU -->
+  <div class="mobile-panel slide-right" id="servicesMenu">
+    <button class="back-btn">← Back</button>
+
+    <a href="audit-assurance.html">Auditing & Assurance</a>
+    <a href="accounting.html">Accounting & Bookkeeping</a>
+    <a href="direct-tax.html">Direct Taxation</a>
+    <a href="gst.html">Indirect Taxation (GST)</a>
+    <a href="advisory.html">Advisory & Compliance</a>
+  </div>
+</div>
+
+
+<!-- ===== HERO ===== -->
+<section class="about-hero">
+  <div class="about-container fade">
+    <h1>About Adarsh & Co.</h1>
+    <p>
+      A trusted Chartered Accountancy firm with over two decades of professional excellence,
+      supporting businesses and individuals with integrity, precision and confidence.
+    </p>
+  </div>
 </section>
 
+<!-- ===== WHO WE ARE ===== -->
+<section class="about-section">
+  <div class="about-container fade">
+    <h2>Who We Are</h2>
+    <p>
+      Established in 1997, Adarsh & Co., Chartered Accountants, operates from Bengaluru and
+      brings over 28 years of experience in delivering dependable professional services.
+    </p>
+    <p>
+      Our expertise spans audit & assurance, taxation, accounting, company law services
+      and startup advisory — offering clients a single trusted partner for compliance and growth.
+    </p>
+  </div>
+</section>
+
+<!-- ===== PHILOSOPHY ===== -->
+<section class="about-section">
+  <div class="about-container fade">
+    <h2>Our Philosophy</h2>
+
+    <div class="values">
+      <div class="value-card">
+        <h3>Integrity & Trust</h3>
+        <p>Transparency, ethics and accountability guide every engagement.</p>
+      </div>
+
+      <div class="value-card">
+        <h3>Client-Centric</h3>
+        <p>Long-term partnerships built on responsiveness and reliability.</p>
+      </div>
+
+      <div class="value-card">
+        <h3>Continuous Learning</h3>
+        <p>Always aligned with evolving regulations and industry practices.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="about-hero">
+  <div class="about-container fade">
+    <h2>Why Choose Us</h2>
+    <p>
+      Our strength lies in combining deep technical expertise with practical business insight.
+      We focus on proactive compliance, risk mitigation and clear financial guidance.
+    </p>
+    <p>
+      Clients value our accessibility, consistency and commitment to delivering solutions
+      that are timely, compliant and commercially sound.
+    </p>
+  </div>
+</section>
+
+<!-- ===== TEAM ===== -->
+<section class="about-section">
+  <div class="about-container fade">
+    <h2>Leadership & Core Team</h2>
+
+    <div class="team">
+      <div class="team-card">
+        <h3>CA. Adarsh Rao B.</h3>
+        <span>Founder & Proprietor | B.Com, FCA</span>
+        <p>
+          Proprietor has 28 year of experience in Audit, Accounting,
+Corporate and Individual Taxation, GST, FEMA, Valuation and Management Consultancy. He has
+handled complex issues in taxation and accounting for many small and medium enterprises over
+the years. He represents clients in income Tax and GST departments. He has a strong team of
+accountants handling Compliance, Audit and Accounting.
+        </p>
+      </div>
+
+      <div class="team-card">
+        <h3>CA. Sanjay Suthar</h3>
+        <span>Team Manager</span>
+        <p>
+          Team Manager has 5+ years of experience in Audit & Assurance of Companies
+Charitable trust and LLP. Computation and filing of Income Tax Returns of Corporates, Trusts,
+NRIs and HNIs. GST Audits and Assessments
+        </p>
+      </div>
+
+      <div class="team-card">
+        <h3>Lisha Gangadhar</h3>
+        <span>Accounts Manager</span>
+        <p>
+          Accounts Manager, has 10+ years of experience in Accounting and Tax
+Compliance. ROC filing & Compliance, GST filings & GST Refund Applications, TDS and
+Professional Tax filing and MSME Registration..
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GOOGLE REVIEWS + MAP ===== -->
+<section class="about-hero">
+  <div class="about-container fade">
+    <h2>Trusted by Clients</h2>
+
+    <div class="rating-box">
+      <div class="stars">★★★★★</div>
+      <strong>4.6 Google Rating</strong>
+      <span>• Based on client reviews</span>
+    </div>
+
+    <div style="margin-top:40px;">
+      <iframe
+        src="https://www.google.com/maps?q=Suite%20No.%20G-02%20Brigade%20Business%20Suites%20Jayanagar%20Bengaluru&output=embed"
+        width="100%"
+        height="360"
+        style="border-radius:16px;border:0;"
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="main-footer">
+
+  <div class="footer-top">
+    <div class="footer-grid">
+
+      <!-- SERVICES -->
+      <div>
+        <h4>Our Services</h4>
+        <a href="audit-assurance.html">Auditing & Assurance</a>
+    <a href="accounting.html">Accounting & Bookkeeping</a>
+    <a href="direct-tax.html">Direct Taxation</a>
+    <a href="gst.html">Indirect Taxation (GST)</a>
+    <a href="advisory.html">Advisory & Compliance</a>
+      </div>
+
+      <!-- WHO WE SERVE -->
+      <div>
+  <h4>Who We Serve</h4>
+  <p>Foreign Entities</p>
+  <p>Enterprises</p>
+  <p>SMEs</p>
+  <p>Individuals</p>
+  <p>Startups</p>
+</div>
+
+
+      <!-- INFO -->
+      <div>
+        <h4>Info</h4>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Blog & Articles</a>
+      </div>
+
+      <!-- CONTACT -->
+      <div>
+        <h4>Get in Touch</h4>
+        <p>
+          Suite No. G-02, Brigade Business Suites,<br>
+          10th Main, 2nd Block, Near Ashoka Pillar,<br>
+          Jayanagar, Bengaluru – 560011
+        </p>
+        <p>
+          Mobile: <a href="tel:+919845184260">98451 84260</a><br>
+          Phone: <a href="tel:08026566060">080-26566060</a><br>
+          Email: <a href="mailto:caadarshrao@gmail.com">caadarshrao@gmail.com</a>
+        </p>
+
+        <!-- SOCIAL -->
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/adarsh-rao-0a1a9b40/" target="_blank" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#0f2a8a">
+              <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.48 1 4.98 2.12 4.98 3.5zM.5 8.5h4V23h-4zM8.5 8.5h3.8v2h.1c.53-1 1.83-2.1 3.77-2.1 4.03 0 4.77 2.65 4.77 6.1V23h-4v-7.3c0-1.74-.03-3.97-2.42-3.97-2.42 0-2.8 1.9-2.8 3.85V23h-4z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Adarsh & Co. Chartered Accountants. All rights reserved.
+  </div>
+
+</footer>
+
+<!-- ===== ANIMATIONS ===== -->
+<script>
+const faders=document.querySelectorAll('.fade');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('show');
+      observer.unobserve(e.target);
+    }
+  });
+},{threshold:.2});
+faders.forEach(f=>observer.observe(f));
+</script>
+<div id="scrollTopBtn">
+  <svg width="52" height="52">
+    <circle
+      cx="26"
+      cy="26"
+      r="22"
+      stroke="#e5e7eb"
+      stroke-width="4"
+      fill="none"
+    />
+    <circle
+      id="progressCircle"
+      cx="26"
+      cy="26"
+      r="22"
+      stroke="#1d4ed8"
+      stroke-width="4"
+      fill="none"
+      stroke-linecap="round"
+      stroke-dasharray="138"
+      stroke-dashoffset="138"
+    />
+  </svg>
+  <span>↑</span>
+</div>
+<script>
+const scrollBtn = document.getElementById("scrollTopBtn");
+const progressCircle = document.getElementById("progressCircle");
+const circumference = 2 * Math.PI * 22;
+
+progressCircle.style.strokeDasharray = circumference;
+progressCircle.style.strokeDashoffset = circumference;
+
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollTop / docHeight;
+
+  progressCircle.style.strokeDashoffset =
+    circumference - progress * circumference;
+
+  if (scrollTop > 300) {
+    scrollBtn.classList.add("show");
+  } else {
+    scrollBtn.classList.remove("show");
+  }
+});
+
+scrollBtn.addEventListener("click", () => {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+window.scrollTo({
+  top: 0,
+  behavior: prefersReducedMotion ? "auto" : "smooth"
+});
+
+});
+</script>
+<script>
+const headerBrand = document.querySelector('.header-brand');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 40) {
+    headerBrand.style.transform = 'scale(0.94)';
+    headerBrand.style.opacity = '0.9';
+  } else {
+    headerBrand.style.transform = 'scale(1)';
+    headerBrand.style.opacity = '1';
+  }
+});
+
+</script>
+
+<script>
+const menuToggle = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+const overlay = document.getElementById("menuOverlay");
+const closeBtn = document.getElementById("menuClose");
+
+const submenuBtns = document.querySelectorAll(".submenu-btn");
+const backBtns = document.querySelectorAll(".back-btn");
+
+const isMobile = () => window.innerWidth <= 992;
+
+function openMenu() {
+  if (!isMobile()) return;
+  mobileMenu.classList.add("open");
+  overlay.classList.add("show");
+  document.body.classList.add("menu-open");
+}
+
+function closeMenu() {
+  mobileMenu.classList.remove("open");
+  overlay.classList.remove("show");
+  document.body.classList.remove("menu-open");
+
+  document.querySelector(".mobile-panel.active")?.classList.remove("active");
+  document.getElementById("mainMenu").classList.add("active");
+}
+
+menuToggle.addEventListener("click", openMenu);
+overlay.addEventListener("click", closeMenu);
+closeBtn.addEventListener("click", closeMenu);
+
+// Submenu open
+submenuBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelector(".mobile-panel.active").classList.remove("active");
+    const target = document.getElementById(btn.dataset.target);
+    target.classList.add("active","slide-right");
+  });
+});
+
+// Back button
+backBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelector(".mobile-panel.active").classList.remove("active");
+    document.getElementById("mainMenu").classList.add("active");
+  });
+});
+</script>
 </body>
 </html>
