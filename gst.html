@@ -26,13 +26,15 @@
 <meta name="theme-color" content="#1d4ed8">
 
 
-<!-- GOOGLE FONTS -->
+<!-- GOOGLE FONTS --> 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div id="menuOverlay"></div>
+
 <!-- ================= HEADER ================= -->
 <header class="main-header">
   <div class="header-inner">
@@ -41,10 +43,13 @@
     <a href="index.html" class="header-brand">
   <img src="Screenshot-Capture-2023-12-04-15-58-14.png" alt="CA India Logo">
   <div class="brand-text">
-    <div class="brand-name">ADARSH & CO.</div>
+    <div class="brand-name">
+  ADARSH <span class="amp">&</span> CO.
+</div>
     <div class="brand-sub">Chartered Accountants</div>
   </div>
 </a>
+
 
     <!-- HAMBURGER -->
     <div class="hamburger" id="hamburger">
@@ -57,17 +62,17 @@
     <nav class="header-nav" id="mainNav">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" >About</a></li>
+        <li><a href="about.html" >Who We Are</a></li>
 
         <!-- SERVICES -->
         <li class="has-mega">
-          <a href="javascript:void(0)" class="active">Services</a>
+          <a href="javascript:void(0)" class="active">What We Offer</a>
 
           <div class="mega-menu">
             <div class="mega-inner">
 
               <div class="mega-column">
-                <h4><a href="audit-assurance.html">Auditing & Assurance</a></h4>
+                <h4><a href="audit-assurance.html">Audit, Assurance & Compliance</a></h4>
                 <ul>
                   <li><a href="audit-assurance.html#statutory-audit">Statutory Audit</a></li>
                   <li><a href="audit-assurance.html#tax-audit">Tax Audit (44AB)</a></li>
@@ -112,7 +117,7 @@
               </div>
 
               <div class="mega-column">
-                <h4><a href="advisory.html">Advisory & Compliance</a></h4>
+                <h4><a href="advisory.html">Compliance</a></h4>
                 <ul>
                   <li><a href="advisory.html#startup">Startup Advisory</a></li>
                   <li><a href="advisory.html#fundraising">Fundraising Support</a></li>
@@ -127,7 +132,37 @@
         </li>
 
         <li><a href="team.html">Who We Serve</a></li>
-        <li><a href="contact.html">Info</a></li>
+        <li class="has-mega info-mega">
+
+  <a href="javascript:void(0)">Info</a>
+
+  <div class="mega-menu">
+    <div class="mega-inner">
+
+      <!-- CAREERS -->
+      <div class="mega-column">
+        <h4>Careers</h4>
+        <ul>
+          <li><a href="careers.html">Open Positions</a></li>
+
+          <li><a href="apply.html">Apply Now</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="mega-column">
+        <h4>Contact Us</h4>
+        <ul>
+          <li><a href="contact.html">Get in Touch</a></li>
+          
+          <li><a href="contact.html#location">Office Location</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</li>
+
       </ul>
     </nav>
 
@@ -135,6 +170,7 @@
     <div class="header-cta">
       <a class="call-btn" href="tel:+919845184260">Call Us: +91 98451 84260</a>
       <a class="callback-btn" href="contact.html">Request a Callback</a>
+     
     </div>
 
   </div>
@@ -147,14 +183,17 @@
   <!-- MAIN MENU -->
   <div class="mobile-panel active" id="mainMenu">
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
+    <a href="about.html">Who We Are</a>
 
     <button class="submenu-btn" data-target="servicesMenu">
-      Services →
+      What We Offer →
     </button>
 
     <a href="team.html">Who We Serve</a>
-    <a href="contact.html">Info</a>
+    <button class="submenu-btn" data-target="infoMenu">
+  Info →
+</button>
+
     <div class="mobile-contact-actions">
   <a href="tel:+919845184260" class="call-action" aria-label="Call Us">
     📞
@@ -174,16 +213,35 @@
   <div class="mobile-panel slide-right" id="servicesMenu">
     <button class="back-btn">← Back</button>
 
-    <a href="audit-assurance.html">Auditing & Assurance</a>
+    <a href="audit-assurance.html">Audit, Assurance & Compliance</a>
     <a href="accounting.html">Accounting & Bookkeeping</a>
     <a href="direct-tax.html">Direct Taxation</a>
     <a href="gst.html">Indirect Taxation (GST)</a>
-    <a href="advisory.html">Advisory & Compliance</a>
+    <a href="advisory.html">Advisory</a>
   </div>
+  <div class="mobile-panel slide-right" id="infoMenu">
+    <button class="back-btn">← Back</button>
+
+    <div class="mobile-subgroup">
+      <strong>Careers</strong>
+      <a href="careers.html">Open Positions</a>
+
+      <a href="apply.html">Apply Now</a>
+    </div>
+
+    <div class="mobile-subgroup">
+      <strong>Contact Us</strong>
+      <a href="contact.html">Get in Touch</a>
+      
+      <a href="contact.html#location">Office Location</a>
+    </div>
+  </div>
+
+</div>
+<!-- INFO SUBMENU -->
+  
 </div>
 
-
-    
 <!-- INDIRECT TAXATION – INTRO -->
 <section class="audit-section">
   <div class="audit-container">
@@ -323,6 +381,7 @@
     </div>
   </div>
 </section>
+
 <footer class="main-footer">
 
   <div class="footer-top">
@@ -330,8 +389,8 @@
 
       <!-- SERVICES -->
       <div>
-        <h4>Our Services</h4>
-        <a href="audit-assurance.html">Auditing & Assurance</a>
+        <h4>What We Offer</h4>
+        <a href="audit-assurance.html">Audit, Assurance & Compliance</a>
     <a href="accounting.html">Accounting & Bookkeeping</a>
     <a href="direct-tax.html">Direct Taxation</a>
     <a href="gst.html">Indirect Taxation (GST)</a>
@@ -340,32 +399,35 @@
 
       <!-- WHO WE SERVE -->
       <div>
-  <h4>Who We Serve</h4>
-  <p>Foreign Entities</p>
-  <p>Enterprises</p>
-  <p>SMEs</p>
-  <p>Individuals</p>
-  <p>Startups</p>
+        <h4>Who We Serve</h4>
+  <a href="team.html#foreign">Foreign Entities</a>
+<a href="team.html#enterprises">Enterprises</a>
+<a href="team.html#sme">SMEs</a>
+<a href="team.html#individuals">Individuals</a>
+<a href="team.html#startups">Startups</a>
 </div>
 
 
       <!-- INFO -->
       <div>
         <h4>Info</h4>
-        <a href="about.html">About Us</a>
+        <a href="about.html#team">Our Team</a>
         <a href="contact.html">Contact Us</a>
-        <a href="#">Careers</a>
-        <a href="#">Blog & Articles</a>
+        <a href="careers.html">Careers</a>
       </div>
 
       <!-- CONTACT -->
       <div>
         <h4>Get in Touch</h4>
-        <p>
-          Suite No. G-02, Brigade Business Suites,<br>
-          10th Main, 2nd Block, Near Ashoka Pillar,<br>
-          Jayanagar, Bengaluru – 560011
-        </p>
+        <div class="footer-address">
+  
+    <span>Suite No. G-02, Brigade Business Suites</span>
+    <span>10th Main, 2nd Block, Near Ashoka Pillar</span>
+    <span>Jayanagar, Bengaluru – 560011
+  </span>
+</div>
+
+
         <p>
           Mobile: <a href="tel:+919845184260">98451 84260</a><br>
           Phone: <a href="tel:08026566060">080-26566060</a><br>
@@ -390,6 +452,44 @@
   </div>
 
 </footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script>
+// FADE-IN ON SCROLL
+const faders=document.querySelectorAll('.fade');
+const fadeObserver=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('show');
+      fadeObserver.unobserve(e.target);
+    }
+  });
+},{threshold:.2});
+faders.forEach(f=>fadeObserver.observe(f));
+
+// COUNTERS (SYNC + SCROLL)
+const counters=document.querySelectorAll('.counter');
+const numbers=document.getElementById('numbers');
+let started=false;
+const DURATION=2000;
+
+function animate(ts){
+  if(!animate.start) animate.start=ts;
+  let p=Math.min((ts-animate.start)/DURATION,1);
+  p=1-Math.pow(1-p,3);
+  counters.forEach(c=>c.innerText=Math.floor(c.dataset.target*p));
+  if(p<1) requestAnimationFrame(animate);
+  else counters.forEach(c=>c.innerText=c.dataset.target);
+}
+
+new IntersectionObserver(e=>{
+  if(e[0].isIntersecting && !started){
+    started=true;
+    requestAnimationFrame(animate);
+  }
+},{threshold:.4}).observe(numbers);
+</script>
+<!-- Scroll to Top Button -->
 <div id="scrollTopBtn">
   <svg width="52" height="52">
     <circle
@@ -449,6 +549,21 @@ window.scrollTo({
 });
 </script>
 <script>
+const headerBrand = document.querySelector('.header-brand');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 40) {
+    headerBrand.style.transform = 'scale(0.94)';
+    headerBrand.style.opacity = '0.9';
+  } else {
+    headerBrand.style.transform = 'scale(1)';
+    headerBrand.style.opacity = '1';
+  }
+});
+
+</script>
+
+<script>
 const menuToggle = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
 const overlay = document.getElementById("menuOverlay");
@@ -496,7 +611,6 @@ backBtns.forEach(btn => {
   });
 });
 </script>
-
 
 
 </body>
