@@ -79,7 +79,7 @@ body {
 }
 
 .brand-name {
-  font-family: "Playfair Display", serif;
+  font-family: "DM Serif Display", serif;
   font-size: 30px;
   font-weight: 800;
   letter-spacing: .6px;
@@ -87,19 +87,12 @@ body {
 }
 
 .brand-name {
-  font-family: "Playfair Display", serif;
+  font-family: "DM Serif Display", serif;
   font-weight: 700;
-}
-
-.brand-name .amp {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 700;
-  font-size: 1.15em;
-  margin: 0px;
 }
 
 .brand-sub {
-  font-family: "Playfair Display", serif;
+  font-family: "DM Serif Display", serif;
   font-size: 15px;
   font-weight: 600;
   letter-spacing: .3px;
@@ -225,7 +218,7 @@ body {
 
 /* Mega Menu Columns */
 .mega-column h4 {
-  font-family: "Playfair Display", serif;
+  font-family: "DM Serif Display", serif;
   font-size: 18px;
   font-weight: 700;
   color: #1d4ed8;
@@ -309,13 +302,13 @@ body {
 }
 
 .hero small {
-  font-family: "Playfair Display", serif;
+  font-family: "DM Serif Display", serif;
   font-size: 22px;
   opacity: .9;
 }
 
 .hero h1 {
-  font-family: "Playfair Display", serif;
+  font-family: "DM Serif Display", serif;
   font-size: 56px;
   font-weight: 800;
   margin: 25px 0 30px;
@@ -347,7 +340,7 @@ body {
 }
 
 .about-hero h1 {
-  font-family: "Playfair Display", serif;
+  font-family: "DM Serif Display", serif;
   font-size: 52px;
   font-weight: 800;
   margin-bottom: 20px;
@@ -393,7 +386,7 @@ body {
 }
 
 .section-title {
-  font-family: "Playfair Display", serif;
+  font-family: "DM Serif Display", serif;
   text-align: center;
   font-size: 40px;
   font-weight: 700;
@@ -421,7 +414,7 @@ body {
 }
 
 .about-container h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "DM Serif Display", serif;
   font-size: 36px;
   margin-bottom: 24px;
 }
@@ -449,7 +442,7 @@ body {
 .audit-section h2,
 .audit-section-head h2,
 .audit-block h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "DM Serif Display", serif;
   font-size: 34px;
   color: #0f172a;
   margin-bottom: 18px;
@@ -500,7 +493,7 @@ body {
 }
 
 .card h3 {
-  font-family: "Playfair Display", serif;
+  font-family: "DM Serif Display", serif;
   font-size: 22px;
   margin-bottom: 14px;
   color: #1d4ed8;
@@ -527,7 +520,7 @@ body {
 
 .value-card h3,
 .team-card h3 {
-  font-family: "Playfair Display", serif;
+  font-family: "DM Serif Display", serif;
   color: #1d4ed8;
 }
 
@@ -618,7 +611,7 @@ body {
 }
 
 .cta h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "DM Serif Display", serif;
   font-size: 38px;
   margin-bottom: 26px;
 }
@@ -1122,14 +1115,14 @@ body.menu-open {
 }
 
 @media (max-width: 992px) {
-  .mobile-contact-actions {
-    display: flex;
-    gap: 16px;
-    position: absolute;
-    bottom: 26px;
-    left: 26px;
-    z-index: 9999;
-  }
+  /* Mobile contact icons container */
+.mobile-contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 24px;
+}
+
 
   .mobile-contact-actions a {
     width: 64px;
@@ -1156,8 +1149,19 @@ body.menu-open {
 
   /* Call button */
   .call-action {
-    background: rgba(255,255,255,0.25);
-  }
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #0b3aa4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  text-decoration: none;
+  border: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
 
   /* WhatsApp (brand correct) */
   .whatsapp-action img {
@@ -1233,7 +1237,7 @@ body.menu-open {
 }
 
 .hero-slideshow h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'DM Serif Display', serif;
   font-size: clamp(2rem, 5vw, 4rem);
   color: #fff;
   opacity: 0;
@@ -1299,14 +1303,14 @@ body.menu-open {
       padding: 120px 20px 80px;
       background: #ffffff;
       text-align: center;
-      font-family: "Playfair Display", serif;
+      font-family: "DM Serif Display", serif;
     }
 
     .who-hero h1 {
       font-size: 42px;
       font-weight: 700;
       color: #0f172a;
-      font-family: "Playfair Display", serif;
+      font-family: "DM Serif Display", serif;
     }
 
     .who-container {
@@ -1343,7 +1347,7 @@ body.menu-open {
       font-size: 30px;
       margin-bottom: 16px;
       color: #0f2a8a;
-      font-family: "Playfair Display", serif;
+      font-family: "DM Serif Display", serif;
     }
 
 
@@ -1383,12 +1387,12 @@ body.menu-open {
 
       .who-hero h1 {
         font-size: 34px;
-        font-family: "Playfair Display", serif;
+        font-family: "DM Serif Display", serif;
       }
 
       .who-content h2 {
         font-size: 26px;
-        font-family: "Playfair Display", serif;
+        font-family: "DM Serif Display", serif;
       }
     }
     /* =============================
@@ -1857,7 +1861,7 @@ html {
 }
 
 .careers-hero h1 {
-  font-family: "Playfair Display", serif;
+  font-family: "DM Serif Display", serif;
   font-size: 42px;
   margin: 18px 0;
   color: #0f172a;
@@ -1955,7 +1959,7 @@ html {
 }
 
 .apply-hero h1 {
-  font-family: "Playfair Display", serif;
+  font-family: "DM Serif Display", serif;
   font-size: 40px;
   color: #0f172a;
 }
@@ -2050,18 +2054,7 @@ html {
     padding: 26px;
   }
 }
-.apply-amp {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 700;
-  font-size: 1.15em;
-  margin: 0px;
-}
-.careers-amp {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 700;
-  font-size: 1.15em;
-  margin: 0px;
-}
+
 /* ================= CONTACT SECTION ================= */
 
 .contact-section {
@@ -2080,7 +2073,7 @@ html {
 
 /* LEFT INFO */
 .contact-info h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "DM Serif Display", serif;
   font-size: 34px;
   color: #0f2a8a;
   margin-bottom: 12px;
@@ -2203,7 +2196,7 @@ html {
 }
 
 .map-container h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "DM Serif Display", serif;
   font-size: 34px;
   color: #0f2a8a;
   margin-bottom: 10px;
@@ -2288,4 +2281,225 @@ html {
     color: #2563eb !important;
     cursor: pointer !important;
     pointer-events: auto !important;
+}
+/* ============================
+   MOBILE HEADER & HERO FIX
+   ============================ */
+@media (max-width: 768px) {
+
+  /* HEADER HEIGHT */
+  .main-header {
+    padding: 14px 0;
+  }
+
+  .header-inner {
+    min-height: 64px;
+    align-items: center;
+  }
+
+  /* LOGO SIZE */
+  .header-brand img {
+    height: 38px;
+  }
+
+  .brand-name {
+    font-size: 15px;
+    line-height: 1.1;
+  }
+
+  .brand-sub {
+    font-size: 11px;
+  }
+
+  /* HAMBURGER SIZE */
+  .hamburger span {
+    width: 22px;
+    height: 2px;
+  }
+
+  /* ============================
+     HERO SECTION FIX
+     ============================ */
+
+  .hero {
+    min-height: 70vh;
+    padding-top: 90px; /* pushes content below header */
+    align-items: flex-start;
+  }
+
+  .hero-slideshow,
+  .hero-content {
+    padding: 0 18px;
+  }
+
+  /* HERO TITLE (Accounting & Bookkeeping) */
+  .hero h1 {
+    font-size: 24px;
+    line-height: 1.3;
+    text-align: center;
+    margin-top: 24px;
+  }
+
+  /* Subtext / paragraph */
+  .hero p {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+}
+/* ============================
+   🔥 MOBILE HERO HARD FIX
+   ============================ */
+/* ============================
+   ✅ FINAL FIX - Header, Static Hero, & Slideshow
+   ============================ */
+@media (max-width: 902px) {
+
+  /* 1. RESET BODY & HEADER (Keep these) */
+  body {
+    padding-top: 0 !important;
+  }
+
+  .main-header {
+    height: 90px !important;
+    background: var(--blue-gradient) !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  .header-inner {
+    height: 100% !important;
+    padding: 0 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .header-brand {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 2. HERO CONTAINER - KEEP CENTERING */
+  .hero {
+    /* Padding pushes content below the 90px fixed header */
+    padding: 140px 20px 60px !important;
+    /* Flexbox centers the static content vertically */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    min-height: 85vh !important;
+    position: relative !important; /* Important context for absolute children */
+  }
+
+  /* 3. 🔥 SLIDESHOW FIX - ABSOLUTE POSITIONING 🔥 */
+  .hero-slideshow {
+    position: absolute !important;
+    top: 50% !important;           /* Move to middle of hero container */
+    left: 0 !important;
+    width: 100% !important;
+    /* Shift up by half its own height to perfectly center it */
+    transform: translateY(-50%) !important; 
+    padding: 0 20px !important;    /* Ensure text doesn't hit edges */
+    z-index: 1 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  /* Adjust slideshow text size so it fits */
+  .hero-slideshow h1 {
+     font-size: 32px !important;
+     line-height: 1.25 !important;
+     margin: 0 !important;
+  }
+
+  /* 4. STATIC CONTENT - RELATIVE POSITIONING */
+  /* This stays in the normal flex flow to dictate the section height */
+  .hero-content {
+    position: relative !important;
+    z-index: 2 !important; /* Stays on top when visible */
+    width: 100% !important;
+    margin: 0 !important;
+    /* Ensure it's hidden when not active so slideshow shows */
+    opacity: 0; 
+    transition: opacity 0.5s ease;
+  }
+  /* Only show it when the JS adds the class */
+  .hero-content.show {
+    opacity: 1 !important;
+  }
+
+  .hero h1 {
+    font-size: 26px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 16px !important;
+    max-width: 100%;
+  }
+
+  .hero p {
+    font-size: 15px !important;
+    max-width: 100%;
+    margin-bottom: 24px !important;
+  }
+}/* Global ampersand styling */
+.amp, .careers-amp, .apply-amp  {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-size: 1.15em;
+  margin: 0 0.08em;
+  vertical-align: -0.05em;
+  letter-spacing: -0.02em;
+}
+
+}
+
+/* Center last card (Paid Assistant) */
+.positions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.positions-grid .position-card:last-child {
+  justify-self: center;
+}
+/* ============================
+   🔥 LOGO & FONT SIZE BOOST (MOBILE)
+   Add this to the very bottom of style.css
+   ============================ */
+@media (max-width: 902px) {
+
+  /* 1. Make the Logo Image Bigger */
+  .header-brand img {
+    height: 46px !important; /* Increased from 38px */
+    width: auto !important;
+  }
+
+  /* 2. Increase "Adarsh & Co." Text */
+  .brand-name {
+    font-size: 23px !important; /* Increased from 15px */
+    line-height: 1.1 !important;
+    font-weight: 800 !important; /* Extra Bold */
+    letter-spacing: 0.5px !important;
+  }
+
+  /* 3. Increase "Chartered Accountants" Subtext */
+  .brand-sub {
+    font-size: 12.5px !important; /* Increased from 11px */
+    font-weight: 600 !important;
+    letter-spacing: 0.4px !important;
+    opacity: 0.95 !important; /* Make it brighter */
+  }
+  
+  /* 4. Ensure the Brand Container allows the size */
+  .header-brand {
+    gap: 14px !important; /* More space between logo and text */
+  }
 }
