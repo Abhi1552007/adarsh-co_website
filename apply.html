@@ -32,7 +32,7 @@
 
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+
 <div id="menuOverlay"></div>
 
 <!-- ================= HEADER ================= -->
@@ -258,10 +258,12 @@
 
     <!-- 🔥 FORMPSREE FORM -->
     <form
-      action="https://formspree.io/f/mgozvqqn"
-      method="POST"
-      enctype="multipart/form-data"
-    >
+  id="careerForm"
+  action="https://formspree.io/f/mgozvqqn"
+  method="POST"
+  enctype="multipart/form-data"
+>
+
 
       <div class="apply-group">
         <label>Full Name *</label>
@@ -274,9 +276,22 @@
       </div>
 
       <div class="apply-group">
-        <label>Phone Number *</label>
-        <input type="tel" name="phone" required placeholder="+91 XXXXX XXXXX">
-      </div>
+  <label>Phone Number *</label>
+
+  <div class="phone-input">
+    <span class="country-code">+91</span>
+    <input
+      type="tel"
+      name="phone"
+      required
+      pattern="[0-9]{10}"
+      maxlength="10"
+      placeholder="XXXXXXXXXX"
+      inputmode="numeric"
+      oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,10)"
+    >
+  </div>
+</div>
 
       <div class="apply-group">
         <label>Applying For *</label>
@@ -289,21 +304,15 @@
 
       </div>
 
-      <div class="apply-group">
-        <label>Upload Resume *</label>
-        <div class="file-box">
-          <input type="file" name="resume" required accept=".pdf,.doc,.docx">
-          <p>Accepted formats: PDF, DOC, DOCX (Max 2MB)</p>
-        </div>
-      </div>
-
       <!-- Optional message -->
       <input type="hidden" name="subject" value="New Career Application - Adarsh & Co.">
+      <input type="hidden" name="_next" value="https://caadarsh.com/apply.html?status=success">
+      <input type="hidden" name="_captcha" value="false">
 
       <div class="apply-submit">
         <button type="submit">Submit Application</button>
       </div>
-
+      
     </form>
 
   </div>
@@ -538,9 +547,34 @@ backBtns.forEach(btn => {
   });
 });
 </script>
+<script>
+  // 1. CHECK FOR SUCCESS ON LOAD
+  // If the URL contains "?status=success", we know the user just submitted the form.
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('status') === 'success') {
+    // Hide Form
+    document.getElementById("careerForm").style.display = "none";
+    // Show Success Message (Override the CSS)
+    document.getElementById("form-success").style.display = "block";
+    
+    // Optional: Scroll to the message so they see it
+    document.getElementById("form-success").scrollIntoView({ behavior: 'smooth' });
+  }
+
+  // 2. HANDLE THE SUBMIT CLICK
+  document.getElementById("careerForm").addEventListener("submit", function(e) {
+    // Show the instruction prompt
+    const userAgreed = confirm("IMPORTANT:\n\nTo complete your application, you must email your updated CV to:\nadarshrao@caadarsh.com\n\nClick OK to submit your application.");
+
+    if (!userAgreed) {
+      // If they click "Cancel", we stop the submission so they can go back
+      e.preventDefault();
+    }
+    // If they click "OK", we do nothing. The form submits naturally to Formspree,
+    // then Formspree redirects them back to ?status=success
+  });
+</script>
 
 </body>
 </html>
 
-</body>
-</html>

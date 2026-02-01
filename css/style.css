@@ -780,10 +780,10 @@ body {
 
   .header-nav {
     position: fixed;
-    top: 80px; /* Adjust based on header height */
+    top: 90px; /* Adjust based on header height */
     left: 0;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 90px);
     background: #0b3c9d;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
@@ -2348,158 +2348,114 @@ html {
   }
 
 }
-/* ============================
-   🔥 MOBILE HERO HARD FIX
-   ============================ */
-/* ============================
-   ✅ FINAL FIX - Header, Static Hero, & Slideshow
-   ============================ */
+/* ======================================================
+   🚀 UNIVERSAL MOBILE FIX (Android + iOS)
+   Replaces all previous mobile hero/header hacks.
+   ====================================================== */
 @media (max-width: 902px) {
-
-  /* 1. RESET BODY & HEADER (Keep these) */
-  body {
-    padding-top: 0 !important;
-  }
-
+  body { padding-top: 0 !important; overscroll-behavior-y: none; }
+  
+  /* Fixed Header */
   .main-header {
-    height: 90px !important;
-    background: var(--blue-gradient) !important;
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
+    height: 90px !important; background: var(--blue-gradient) !important;
+    position: fixed !important; top: 0; left: 0; width: 100%;
+    z-index: 99999; box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   }
-
   .header-inner {
-    height: 100% !important;
-    padding: 0 24px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
+    height: 100% !important; padding: 0 20px !important;
+    display: flex !important; align-items: center !important; justify-content: space-between !important;
   }
+  .header-brand { gap: 12px !important; max-width: 80%; }
+  .header-brand img { height: 44px !important; width: auto !important; }
+  .brand-name { font-size: 22px !important; line-height: 1.1 !important; white-space: nowrap; }
+  .brand-sub { font-size: 13px !important; opacity: 0.95 !important; }
 
-  .header-brand {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /* 2. HERO CONTAINER - KEEP CENTERING */
+  /* --- HERO GRID LOCK --- */
   .hero {
-    /* Padding pushes content below the 90px fixed header */
-    padding: 140px 20px 60px !important;
-    /* Flexbox centers the static content vertically */
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
+    display: grid !important; place-items: center !important;
+    grid-template-areas: "stack" !important;
+    padding: 140px 20px 60px !important; margin: 0 !important;
+    width: 100% !important; min-height: 90dvh !important;
     text-align: center !important;
-    min-height: 85vh !important;
-    position: relative !important; /* Important context for absolute children */
-  }
-
-  /* 3. 🔥 SLIDESHOW FIX - ABSOLUTE POSITIONING 🔥 */
-  .hero-slideshow {
-    position: absolute !important;
-    top: 50% !important;           /* Move to middle of hero container */
-    left: 0 !important;
-    width: 100% !important;
-    /* Shift up by half its own height to perfectly center it */
-    transform: translateY(-50%) !important; 
-    padding: 0 20px !important;    /* Ensure text doesn't hit edges */
-    z-index: 1 !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-
-  /* Adjust slideshow text size so it fits */
-  .hero-slideshow h1 {
-     font-size: 32px !important;
-     line-height: 1.25 !important;
-     margin: 0 !important;
-  }
-
-  /* 4. STATIC CONTENT - RELATIVE POSITIONING */
-  /* This stays in the normal flex flow to dictate the section height */
-  .hero-content {
-    position: relative !important;
-    z-index: 2 !important; /* Stays on top when visible */
-    width: 100% !important;
-    margin: 0 !important;
-    /* Ensure it's hidden when not active so slideshow shows */
-    opacity: 0; 
-    transition: opacity 0.5s ease;
-  }
-  /* Only show it when the JS adds the class */
-  .hero-content.show {
-    opacity: 1 !important;
-  }
-
-  .hero h1 {
-    font-size: 26px !important;
-    line-height: 1.3 !important;
-    margin-bottom: 16px !important;
-    max-width: 100%;
-  }
-
-  .hero p {
-    font-size: 15px !important;
-    max-width: 100%;
-    margin-bottom: 24px !important;
-  }
-}/* Global ampersand styling */
-.amp, .careers-amp, .apply-amp  {
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 600;
-  font-size: 1.15em;
-  margin: 0 0.08em;
-  vertical-align: -0.05em;
-  letter-spacing: -0.02em;
-}
-
-
-
-/* Center last card (Paid Assistant) */
-.positions-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
-}
-
-.positions-grid .position-card:last-child {
-  justify-self: center;
-}
-/* ============================
-   🔥 LOGO & FONT SIZE BOOST (MOBILE)
-   Add this to the very bottom of style.css
-   ============================ */
-@media (max-width: 902px) {
-
-  /* 1. Make the Logo Image Bigger */
-  .header-brand img {
-    height: 46px !important; /* Increased from 38px */
-    width: auto !important;
-  }
-
-  /* 2. Increase "Adarsh & Co." Text */
-  .brand-name {
-    font-size: 23px !important; /* Increased from 15px */
-    line-height: 1.1 !important;
-    font-weight: 800 !important; /* Extra Bold */
-    letter-spacing: 0.5px !important;
-  }
-
-  /* 3. Increase "Chartered Accountants" Subtext */
-  .brand-sub {
-    font-size: 12.5px !important; /* Increased from 11px */
-    font-weight: 600 !important;
-    letter-spacing: 0.4px !important;
-    opacity: 0.95 !important; /* Make it brighter */
   }
   
-  /* 4. Ensure the Brand Container allows the size */
-  .header-brand {
-    gap: 14px !important; /* More space between logo and text */
+  /* Force overlap */
+  .hero-slideshow, .hero-content {
+    grid-area: stack !important; width: 100% !important;
+    display: flex !important; flex-direction: column !important;
+    justify-content: center !important; align-items: center !important;
+    position: relative !important; top: auto !important; transform: none !important;
+  }
+
+  /* --- LOGIC: Hide slideshow if content is showing --- */
+  .hero:has(.hero-content.show) .hero-slideshow {
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+
+  /* Slideshow Styling */
+  .hero-slideshow { z-index: 1 !important; pointer-events: none; transition: opacity 0.3s ease; }
+  .hero-slideshow h1 { 
+    font-size: 32px !important; line-height: 1.25 !important; 
+    color: #fff !important; text-shadow: 0 2px 15px rgba(0,0,0,0.5);
+  }
+
+  /* Static Content Styling (No Card) */
+  .hero-content { z-index: 10 !important; opacity: 0; transition: opacity 0.4s ease; }
+  
+  .hero-content.show {
+    opacity: 1 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+  
+  .hero-content h1 { 
+    font-size: 26px !important; margin-bottom: 18px !important; 
+    text-shadow: 0 2px 15px rgba(0,0,0,0.8) !important;
+  }
+  .hero-content p { 
+    font-size: 16px !important; max-width: 100% !important; margin-bottom: 26px !important; 
+    text-shadow: 0 1px 10px rgba(0,0,0,0.8) !important;
+  }
+
+  .hero-btn {
+    display: inline-block !important; margin-top: 10px !important;
+    padding: 14px 34px !important; pointer-events: auto !important;
+    position: relative !important; z-index: 20 !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+}
+/* ======================================================
+   🚨 FINAL Z-INDEX OVERRIDE (Fixes Disappearing X)
+   Paste this at the very bottom of style.css
+   ====================================================== */
+
+@media (max-width: 992px) {
+  
+  /* 1. Force the Overlay above the Header */
+  #menuOverlay {
+    z-index: 100000 !important; /* Higher than Header (99999) */
+  }
+
+  /* 2. Force the Blue Drawer above the Overlay */
+  .mobile-menu {
+    z-index: 100001 !important; /* Higher than Overlay */
+    padding-top: 100px !important; /* Push links down so they aren't hidden */
+  }
+
+  /* 3. Force the "X" Button to be Visible and Clickable */
+  .menu-close {
+    z-index: 100002 !important; /* Highest priority */
+    top: 28px !important;       /* Aligns with the new 90px header center */
+    right: 24px !important;
+    display: block !important;
+    color: #ffffff !important;  /* Ensure it's white */
+  }
+
+  /* 4. Ensure the Hamburger (Opener) is also visible */
+  .hamburger {
+    z-index: 100002 !important;
+    position: relative !important;
   }
 }
